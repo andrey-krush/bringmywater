@@ -1,0 +1,1 @@
+sectionJS(".contact",function(e){e.forEach(e=>{let c=e.querySelector(".contact__form-success__btn > button"),t=e.querySelector(".hide-on-success"),n=e.querySelector(".show-on-success");c&&c.addEventListener("click",function(){n?fadeOut(n,300,function(){t&&fadeIn(t,300)}):t&&fadeIn(t,300)})})});

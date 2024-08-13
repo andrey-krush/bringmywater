@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Water</title>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#191919">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/critical.css">
+<!--  Critical css needs to be connected this way:-->
+<!--  <style>-->
+<!--    <?php echo str_replace('url(..', parse_url(get_template_directory_uri(), PHP_URL_PATH), file_get_contents(TEMPLATE_PATH."/css/critical.css")); ?>-->
+<!--  </style>-->
+
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/sections/header.css" />
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="css/sections/footer.css" />
+  <link rel="stylesheet" href="css/sections/promo.css" />
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="css/sections/checkout.css" />
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="css/sections/choose.css" />
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="css/sections/how.css" />
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="css/sections/our.css" />
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="css/sections/delivery.css" />
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="css/sections/banner.css" />
+</head>
+<body class="page__body" >
+  <div class="site-container">
+    <header class="header">
+    <div class="container">
+      <div class="header__container">
+        <div class="header__item">
+          <a href="./../main.html" class="logo" aria-label="go to main page">
+            <img src="./../img/header-logo.svg" alt="logo" width="97" height="76">
+          </a>
+          <div class="header__row mobile-hide">
+            <a href="tel:0394890480" class="page-phone">
+              <div class="page-phone__ico">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.6053 10.3067L11.092 9.9L9.41201 11.58C7.51947 10.6175 5.9812 9.07921 5.01868 7.18667L6.70534 5.5L6.29868 2H2.62534C2.23868 8.78667 7.81868 14.3667 14.6053 13.98V10.3067Z" fill="white" />
+                </svg>
+              </div>
+              <span>(03) 9489 0480</span>
+            </a>
+            <div class="header__dropdown dropdown">
+              <span>En</span>
+              <!-- <div class="dropdown__list">
+                <ul>
+                  <li>
+                    <a href="">UA</a>
+                  </li>
+                  <li>
+                    <a href="">UA</a>
+                  </li>
+                </ul>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="header__item">
+          <nav class="header__nav mobile-hide">
+            <ul>
+              <li class="active">
+                <a href="./../main.html">Home</a>
+              </li>
+              <li>
+                <a href="./../product-single.html">Order Water</a>
+              </li>
+              <li>
+                <a href="./../about-us.html">About Us</a>
+              </li>
+              <li>
+                <a href="./../contact-us.html">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__btns">
+            <a href="#popup-login" data-fancybox="" class="header__btn header__btn--white" aria-label="open login form">
+              <div class="header__btn-ico">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.66667 5.83333C6.66667 4.94928 7.01786 4.10143 7.64298 3.47631C8.2681 2.85119 9.11594 2.5 10 2.5C10.8841 2.5 11.7319 2.85119 12.357 3.47631C12.9821 4.10143 13.3333 4.94928 13.3333 5.83333C13.3333 6.71739 12.9821 7.56523 12.357 8.19036C11.7319 8.81548 10.8841 9.16667 10 9.16667C9.11594 9.16667 8.2681 8.81548 7.64298 8.19036C7.01786 7.56523 6.66667 6.71739 6.66667 5.83333ZM6.66667 10.8333C5.5616 10.8333 4.50179 11.2723 3.72039 12.0537C2.93899 12.8351 2.5 13.8949 2.5 15C2.5 15.663 2.76339 16.2989 3.23223 16.7678C3.70107 17.2366 4.33696 17.5 5 17.5H15C15.663 17.5 16.2989 17.2366 16.7678 16.7678C17.2366 16.2989 17.5 15.663 17.5 15C17.5 13.8949 17.061 12.8351 16.2796 12.0537C15.4982 11.2723 14.4384 10.8333 13.3333 10.8333H6.66667Z" fill="white" />
+                </svg>
+              </div>
+            </a>
+            <button type="button" class="header__btn js-open-cart" aria-label="open cart">
+              <div class="header__btn-ico">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.1666 15C13.2416 15 12.5 15.7417 12.5 16.6667C12.5 17.1087 12.6756 17.5326 12.9881 17.8452C13.3007 18.1578 13.7246 18.3334 14.1666 18.3334C14.6087 18.3334 15.0326 18.1578 15.3452 17.8452C15.6577 17.5326 15.8333 17.1087 15.8333 16.6667C15.8333 16.2247 15.6577 15.8007 15.3452 15.4882C15.0326 15.1756 14.6087 15 14.1666 15ZM0.833313 1.66669V3.33335H2.49998L5.49998 9.65835L4.36665 11.7C4.24165 11.9334 4.16665 12.2084 4.16665 12.5C4.16665 12.942 4.34224 13.366 4.6548 13.6785C4.96736 13.9911 5.39129 14.1667 5.83331 14.1667H15.8333V12.5H6.18331C6.12806 12.5 6.07507 12.4781 6.036 12.439C5.99693 12.3999 5.97498 12.3469 5.97498 12.2917C5.97498 12.25 5.98331 12.2167 5.99998 12.1917L6.74998 10.8334H12.9583C13.5833 10.8334 14.1333 10.4834 14.4166 9.97502L17.4 4.58335C17.4583 4.45002 17.5 4.30835 17.5 4.16669C17.5 3.94567 17.4122 3.73371 17.2559 3.57743C17.0996 3.42115 16.8877 3.33335 16.6666 3.33335H4.34165L3.55831 1.66669M5.83331 15C4.90831 15 4.16665 15.7417 4.16665 16.6667C4.16665 17.1087 4.34224 17.5326 4.6548 17.8452C4.96736 18.1578 5.39129 18.3334 5.83331 18.3334C6.27534 18.3334 6.69926 18.1578 7.01182 17.8452C7.32438 17.5326 7.49998 17.1087 7.49998 16.6667C7.49998 16.2247 7.32438 15.8007 7.01182 15.4882C6.69926 15.1756 6.27534 15 5.83331 15Z" fill="#036BCD" />
+                </svg>
+                <div class="header__btn-num">
+                  <span>2</span>
+                </div>
+              </div>
+            </button>
+            <button type="button" class="header__btn header__burger mobile-show" aria-label="open menu">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 16V14.8615H19V16H1ZM1 10.5693V9.43074H19V10.5693H1ZM1 5.13852V4H19V5.13852H1Z" fill="#036BCD" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
+
+<div class="menu mobile-show">
+  <div class="menu__inner">
+    <nav class="menu__nav">
+      <ul>
+        <li class="is-active">
+          <a href="./../main.html">Home</a>
+        </li>
+        <li>
+          <a href="./../product-single.html">Order Water</a>
+        </li>
+        <li>
+          <a href="./../about-us.html">About Us</a>
+        </li>
+        <li>
+          <a href="./../contact-us.html">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="menu__info">
+      <a href="mailto:info@bringmywater.com">info@bringmywater.com</a>
+      <a href="tel:0394890480" class="page-phone">
+          <div class="page-phone__ico">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.6053 10.3067L11.092 9.9L9.41201 11.58C7.51947 10.6175 5.9812 9.07921 5.01868 7.18667L6.70534 5.5L6.29868 2H2.62534C2.23868 8.78667 7.81868 14.3667 14.6053 13.98V10.3067Z" fill="white"></path>
+            </svg>
+          </div>
+          <span>(03) 9489 0480</span>
+      </a>
+      <div class="page-date">
+          <span>Monday— sunday</span>
+          <span>9 am— 5 pm</span>
+      </div>
+      <ul class="socials">
+          <li>
+            <a href="" aria-label="go to facebook">
+              <svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M33.6668 17.5063C33.6668 8.24531 26.205 0.737793 17.0002 0.737793C7.79541 0.737793 0.333496 8.24531 0.333496 17.5063C0.333496 25.8758 6.42823 32.8131 14.396 34.0711V22.3535H10.1642V17.5063H14.396V13.812C14.396 9.60939 16.8843 7.28799 20.6912 7.28799C22.5148 7.28799 24.422 7.61551 24.422 7.61551V11.7421H22.3205C20.2502 11.7421 19.6043 13.0348 19.6043 14.361V17.5063H24.2267L23.4878 22.3535H19.6043V34.0711C27.5722 32.8131 33.6668 25.8761 33.6668 17.5063Z" fill="#036bcd"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="" aria-label="go to instagram">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.7135 3.3335C23.5885 3.3385 24.5401 3.3485 25.3618 3.37183L25.6852 3.3835C26.0585 3.39683 26.4268 3.4135 26.8718 3.4335C28.6451 3.51683 29.8552 3.79683 30.9168 4.2085C32.0168 4.63183 32.9435 5.20516 33.8702 6.13016C34.7176 6.96332 35.3734 7.97114 35.7918 9.0835C36.2035 10.1452 36.4835 11.3552 36.5668 13.1302C36.5868 13.5735 36.6035 13.9418 36.6168 14.3168L36.6268 14.6402C36.6518 15.4602 36.6618 16.4118 36.6652 18.2868L36.6668 19.5302V21.7135C36.6709 22.9292 36.6581 24.1448 36.6285 25.3602L36.6185 25.6835C36.6052 26.0585 36.5885 26.4268 36.5685 26.8702C36.4851 28.6452 36.2018 29.8535 35.7918 30.9168C35.3746 32.0298 34.7187 33.0379 33.8702 33.8702C33.0368 34.7174 32.029 35.3731 30.9168 35.7918C29.8552 36.2035 28.6451 36.4835 26.8718 36.5668C26.4763 36.5854 26.0808 36.6021 25.6852 36.6168L25.3618 36.6268C24.5401 36.6502 23.5885 36.6618 21.7135 36.6652L20.4701 36.6668H18.2885C17.0723 36.671 15.856 36.6582 14.6401 36.6285L14.3168 36.6185C13.9212 36.6035 13.5256 36.5863 13.1301 36.5668C11.3568 36.4835 10.1468 36.2035 9.08348 35.7918C7.97126 35.3741 6.96384 34.7182 6.13181 33.8702C5.28356 33.0373 4.62719 32.0294 4.20848 30.9168C3.79681 29.8552 3.51681 28.6452 3.43348 26.8702C3.41491 26.4747 3.39825 26.0791 3.38348 25.6835L3.37515 25.3602C3.34443 24.1449 3.33054 22.9292 3.33348 21.7135V18.2868C3.32883 17.0712 3.34105 15.8555 3.37015 14.6402L3.38181 14.3168C3.39515 13.9418 3.41181 13.5735 3.43181 13.1302C3.51515 11.3552 3.79515 10.1468 4.20681 9.0835C4.62534 7.97 5.28302 6.96187 6.13348 6.13016C6.9653 5.28262 7.97205 4.62681 9.08348 4.2085C10.1468 3.79683 11.3551 3.51683 13.1301 3.4335C13.5735 3.4135 13.9435 3.39683 14.3168 3.3835L14.6401 3.3735C15.8555 3.34388 17.0711 3.3311 18.2868 3.33516L21.7135 3.3335ZM20.0001 11.6668C17.79 11.6668 15.6704 12.5448 14.1076 14.1076C12.5448 15.6704 11.6668 17.79 11.6668 20.0002C11.6668 22.2103 12.5448 24.3299 14.1076 25.8927C15.6704 27.4555 17.79 28.3335 20.0001 28.3335C22.2103 28.3335 24.3299 27.4555 25.8927 25.8927C27.4555 24.3299 28.3335 22.2103 28.3335 20.0002C28.3335 17.79 27.4555 15.6704 25.8927 14.1076C24.3299 12.5448 22.2103 11.6668 20.0001 11.6668ZM20.0001 15.0002C20.6568 15.0001 21.307 15.1293 21.9136 15.3804C22.5203 15.6316 23.0716 15.9998 23.5359 16.464C24.0003 16.9283 24.3687 17.4794 24.6201 18.086C24.8714 18.6926 25.0009 19.3427 25.001 19.9993C25.0011 20.6559 24.8719 21.3061 24.6207 21.9128C24.3695 22.5195 24.0013 23.0707 23.5371 23.5351C23.0729 23.9995 22.5218 24.3679 21.9152 24.6192C21.3086 24.8706 20.6584 25.0001 20.0018 25.0002C18.6757 25.0002 17.404 24.4734 16.4663 23.5357C15.5286 22.598 15.0018 21.3262 15.0018 20.0002C15.0018 18.6741 15.5286 17.4023 16.4663 16.4646C17.404 15.5269 18.6757 15.0002 20.0018 15.0002M28.7518 9.16683C28.1993 9.16683 27.6694 9.38632 27.2787 9.77702C26.888 10.1677 26.6685 10.6976 26.6685 11.2502C26.6685 11.8027 26.888 12.3326 27.2787 12.7233C27.6694 13.114 28.1993 13.3335 28.7518 13.3335C29.3043 13.3335 29.8343 13.114 30.225 12.7233C30.6157 12.3326 30.8351 11.8027 30.8351 11.2502C30.8351 10.6976 30.6157 10.1677 30.225 9.77702C29.8343 9.38632 29.3043 9.16683 28.7518 9.16683Z" fill="#036bcd"></path>
+              </svg>
+            </a>
+          </li>
+      </ul>
+  </div>
+  </div>
+</div>
+
+    <main class="main">
+      <section class="promo">
+    <div class="promo__bg">
+        <img src="./../img/promo-bg.webp" alt="" role="presentation" width="1920" height="860">
+    </div>
+    <div class="container">
+        <div class="promo__container">
+            <div class="promo__title title-h1">
+                <h1>The Best Water & the fastest Delivery</h1>
+            </div>
+            <div class="promo__text section-text">
+                <p>Why strain your back lifting heavy water bottles when you can leave it to us? Our hassle-free delivery service means you can enjoy clean, fresh, and healthy water whenever you want, without lifting a finger.</p>
+            </div>
+            <div class="promo__btn">
+                <a href="" class="btn">Buy Water Online</a>
+            </div>
+        </div>
+    </div>
+</section>
+      <div class="marquee">
+  <div class="marquee__content">
+    <div class="marquee__unit">
+      <span>free delivery</span>
+      <span>free delivery</span>
+      <span>free delivery</span>
+      <span>free delivery</span>
+      <span>free delivery</span>
+      <span>free delivery</span>
+      <span>free delivery</span>
+      <span>free delivery</span>
+      <span>free delivery</span>
+      <span>free delivery</span>
+    </div>
+  </div>
+</div>
+
+      <section class="choose">
+    <div class="choose__container">
+        <div class="choose__info">
+            <div class="choose__title title-h2">
+                <h2>Why Choose Us?</h2>
+            </div>
+            <div class="choose__list">
+                <article class="choose-card">
+                    <div class="choose-card__img">
+                        <img src="./../img/ico-choose-1.svg" alt="" role="presentation" width="80" height="80">
+                    </div>
+                    <div class="section-text">
+                        <p>Say goodbye to extra fees! We offer free delivery straight to your doorstep, ensuring convenience without any hidden costs</p>
+                    </div>
+                </article>
+                <article class="choose-card">
+                    <div class="choose-card__img">
+                        <img src="./../img/ico-choose-2.svg" alt="" role="presentation" width="80" height="80">
+                    </div>
+                    <div class="section-text">
+                        <p>With us, what you see is what you get. Our prices already include taxes, so you can budget confidently without any surprises.</p>
+                    </div>
+                </article>
+                <article class="choose-card">
+                    <div class="choose-card__img">
+                        <img src="./../img/ico-choose-3.svg" alt="" role="presentation" width="80" height="80">
+                    </div>
+                    <div class="section-text">
+                        <p>Why strain your back lifting heavy water bottles when you can leave it to us? Our hassle-free delivery service means you can enjoy clean, fresh, and healthy water whenever you want, without lifting a finger.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="choose__img mobile-hide">
+            <img src="./../img/choose-img.webp" alt="" role="presentation" width="1041" height="940">
+        </div>
+    </div>
+</section>
+      <section class="how">
+    <div class="container">
+        <div class="how__info">
+            <div class="subtitle">
+                <span>Quick guide</span>
+            </div>
+            <div class="how__title title-h2">
+                <h2>How It Works</h2>
+            </div>
+            <div class="how__text section-text">
+                <p>We offer free delivery straight to your doorstep, ensuring convenience without any hidden costs</p>
+            </div>
+        </div>
+        <div class="how__wrapper">
+            <div class="how-item">
+                <div class="how-item__descr">
+                    <div class="how-item__title title-h3">
+                        <h3>1. Place an order</h3>
+                    </div>
+                    <div class="how-item__text section-text">
+                        <p>Simply select the quantity of water cases you need and place your order. Whether it’s a one-time purchase or a recurring delivery, we’ve got you covered.</p>
+                    </div>
+                </div>
+                <div class="how-item__inner">
+                    <div class="how-item__img">
+                        <img src="./../img/how-img-1.webp" alt="" role="presentation" width="547" height="326">
+                    </div>
+                    <div class="how-item__bg el-1">
+                        <img src="./../img/how-bg-1.svg" alt="" role="presentation" width="526" height="512">
+                    </div>
+                </div>
+            </div>
+            <div class="how-item">
+                <div class="how-item__descr">
+                    <div class="how-item__title title-h3">
+                        <h3>2. Track Your Delivery</h3>
+                    </div>
+                    <div class="how-item__text section-text">
+                        <p>No surprises here! Once your order is confirmed, you can easily track your delivery status. Stay informed every step of the way until your water cases arrive at your doorstep.</p>
+                    </div>
+                </div>
+                <div class="how-item__inner">
+                    <div class="how-item__img">
+                        <img src="./../img/how-img-2.webp" alt="" role="presentation" width="547" height="326">
+                    </div>
+                    <div class="how-item__bg el-2">
+                        <img src="./../img/how-bg-2.svg" alt="" role="presentation" width="526" height="512">
+                    </div>
+                </div>
+            </div>
+            <div class="how-item">
+                <div class="how-item__descr">
+                    <div class="how-item__title title-h3">
+                        <h3>3. Enjoy Your Water</h3>
+                    </div>
+                    <div class="how-item__text section-text">
+                        <p>With your water cases safely delivered, it’s time to quench your thirst and boost your well-being. Enjoy the crisp, refreshing taste of our clean and healthy water whenever you need it.</p>
+                    </div>
+                </div>
+                <div class="how-item__inner">
+                    <div class="how-item__img">
+                        <img src="./../img/how-img-3.webp" alt="" role="presentation" width="547" height="326">
+                    </div>
+                    <div class="how-item__bg el-3">
+                        <img src="./../img/how-bg-3.svg" alt="" role="presentation" width="526" height="512">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+      <section class="our">
+    <div class="our__container">
+        <div class="our__img">
+            <img src="./../img/our-img.webp" alt="" role="presentation" width="1031" height="880">
+        </div>
+        <div class="our__info">
+            <div class="subtitle">
+                <span>best service</span>
+            </div>
+            <div class="our__title title-h2">
+                <h2>our water</h2>
+            </div>
+            <div class="our__text section-text">
+                <p>At BringMyWater, we pride ourselves on delivering the finest quality water to our customers. That’s why we exclusively offer Kirkland Signature water, known for its exceptional taste and purity.</p>
+                <p>Kirkland Signature water undergoes a rigorous filtration process, ensuring that every drop is clean, crisp, and free from impurities. With Kirkland Signature water, you can trust that you’re getting premium-quality water sourced from natural springs, providing you with the hydration your body deserves.</p>
+            </div>
+            <div class="our__btn">
+                <a href="" class="btn">Buy Water Online</a>
+            </div>
+        </div>
+    </div>
+</section>
+      <section class="delivery">
+    <div class="container">
+        <div class="delivery__info">
+            <div class="subtitle">
+                <span>find your address</span>
+            </div>
+            <div class="delivery__title title-h2">
+                <h2>Our delivery zone</h2>
+            </div>
+            <div class="delivery__text section-text">
+                <p>BringMyWater offers a reliable and efficient delivery service that covers the entire Greater Los Angeles area. Our delivery team is equipped to handle orders of all sizes, from small home deliveries to large commercial orders. If you’re unsure whether we deliver to your location, please don’t hesitate to contact us, and we will be happy to assist you.</p>
+            </div>
+            <div class="delivery__btn">
+                <a href="" class="btn">Buy Water Online</a>
+            </div>
+        </div>
+        <div class="delivery__img">
+            <img src="./../img/delivery-img.webp" alt="" role="presentation" width="1720" height="600">
+        </div>
+    </div>
+</section>
+      <section class="banner">
+    <div class="banner__inner">
+        <div class="banner__title title-h2">
+            <h2>Have any questions?</h2>
+        </div>
+         <div class="banner__text section-text">
+            <p>Our delivery team is equipped to handle orders of all sizes, from small home deliveries to large commercial orders. If you’re unsure whether we deliver to your location, please don’t hesitate to contact us, and we will be happy to assist you.</p>
+         </div>
+         <div class="banner__btn">
+            <a href="" class="btn btn--white">Contact Us</a>
+         </div>
+    </div>
+</section>
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+        <a href="./../main.html" class="logo">
+            <img src="./../img/footer-logo.svg" alt="logo" width="227" height="200">
+        </a>
+        <div class="footer__item">
+            <nav class="footer__nav">
+                <ul>
+                    <li>
+                        <a href="./../main.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./../product-single.html">Order Water</a>
+                    </li>
+                    <li>
+                        <a href="./../about-us.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="./../contact-us.html">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="./../terms.html">Terms of use</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__info">
+                <a href="tel:0394890480" class="page-phone">
+                    <div class="page-phone__ico">
+                      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.6053 10.3067L11.092 9.9L9.41201 11.58C7.51947 10.6175 5.9812 9.07921 5.01868 7.18667L6.70534 5.5L6.29868 2H2.62534C2.23868 8.78667 7.81868 14.3667 14.6053 13.98V10.3067Z" fill="white" />
+                      </svg>
+                    </div>
+                    <span>(03) 9489 0480</span>
+                </a>
+                <div class="footer__date page-date">
+                    <span>Monday — sunday</span>
+                    <span>9 am — 5 pm</span>
+                </div>
+                <a href="mailto:info@bringmywater.com">info@bringmywater.com</a>
+                <ul class="socials">
+                    <li>
+                        <a href="" aria-label="go to facebook">
+                            <svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M33.6668 17.5063C33.6668 8.24531 26.205 0.737793 17.0002 0.737793C7.79541 0.737793 0.333496 8.24531 0.333496 17.5063C0.333496 25.8758 6.42823 32.8131 14.396 34.0711V22.3535H10.1642V17.5063H14.396V13.812C14.396 9.60939 16.8843 7.28799 20.6912 7.28799C22.5148 7.28799 24.422 7.61551 24.422 7.61551V11.7421H22.3205C20.2502 11.7421 19.6043 13.0348 19.6043 14.361V17.5063H24.2267L23.4878 22.3535H19.6043V34.0711C27.5722 32.8131 33.6668 25.8761 33.6668 17.5063Z" fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" aria-label="go to instagram">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.7135 3.3335C23.5885 3.3385 24.5401 3.3485 25.3618 3.37183L25.6852 3.3835C26.0585 3.39683 26.4268 3.4135 26.8718 3.4335C28.6451 3.51683 29.8552 3.79683 30.9168 4.2085C32.0168 4.63183 32.9435 5.20516 33.8702 6.13016C34.7176 6.96332 35.3734 7.97114 35.7918 9.0835C36.2035 10.1452 36.4835 11.3552 36.5668 13.1302C36.5868 13.5735 36.6035 13.9418 36.6168 14.3168L36.6268 14.6402C36.6518 15.4602 36.6618 16.4118 36.6652 18.2868L36.6668 19.5302V21.7135C36.6709 22.9292 36.6581 24.1448 36.6285 25.3602L36.6185 25.6835C36.6052 26.0585 36.5885 26.4268 36.5685 26.8702C36.4851 28.6452 36.2018 29.8535 35.7918 30.9168C35.3746 32.0298 34.7187 33.0379 33.8702 33.8702C33.0368 34.7174 32.029 35.3731 30.9168 35.7918C29.8552 36.2035 28.6451 36.4835 26.8718 36.5668C26.4763 36.5854 26.0808 36.6021 25.6852 36.6168L25.3618 36.6268C24.5401 36.6502 23.5885 36.6618 21.7135 36.6652L20.4701 36.6668H18.2885C17.0723 36.671 15.856 36.6582 14.6401 36.6285L14.3168 36.6185C13.9212 36.6035 13.5256 36.5863 13.1301 36.5668C11.3568 36.4835 10.1468 36.2035 9.08348 35.7918C7.97126 35.3741 6.96384 34.7182 6.13181 33.8702C5.28356 33.0373 4.62719 32.0294 4.20848 30.9168C3.79681 29.8552 3.51681 28.6452 3.43348 26.8702C3.41491 26.4747 3.39825 26.0791 3.38348 25.6835L3.37515 25.3602C3.34443 24.1449 3.33054 22.9292 3.33348 21.7135V18.2868C3.32883 17.0712 3.34105 15.8555 3.37015 14.6402L3.38181 14.3168C3.39515 13.9418 3.41181 13.5735 3.43181 13.1302C3.51515 11.3552 3.79515 10.1468 4.20681 9.0835C4.62534 7.97 5.28302 6.96187 6.13348 6.13016C6.9653 5.28262 7.97205 4.62681 9.08348 4.2085C10.1468 3.79683 11.3551 3.51683 13.1301 3.4335C13.5735 3.4135 13.9435 3.39683 14.3168 3.3835L14.6401 3.3735C15.8555 3.34388 17.0711 3.3311 18.2868 3.33516L21.7135 3.3335ZM20.0001 11.6668C17.79 11.6668 15.6704 12.5448 14.1076 14.1076C12.5448 15.6704 11.6668 17.79 11.6668 20.0002C11.6668 22.2103 12.5448 24.3299 14.1076 25.8927C15.6704 27.4555 17.79 28.3335 20.0001 28.3335C22.2103 28.3335 24.3299 27.4555 25.8927 25.8927C27.4555 24.3299 28.3335 22.2103 28.3335 20.0002C28.3335 17.79 27.4555 15.6704 25.8927 14.1076C24.3299 12.5448 22.2103 11.6668 20.0001 11.6668ZM20.0001 15.0002C20.6568 15.0001 21.307 15.1293 21.9136 15.3804C22.5203 15.6316 23.0716 15.9998 23.5359 16.464C24.0003 16.9283 24.3687 17.4794 24.6201 18.086C24.8714 18.6926 25.0009 19.3427 25.001 19.9993C25.0011 20.6559 24.8719 21.3061 24.6207 21.9128C24.3695 22.5195 24.0013 23.0707 23.5371 23.5351C23.0729 23.9995 22.5218 24.3679 21.9152 24.6192C21.3086 24.8706 20.6584 25.0001 20.0018 25.0002C18.6757 25.0002 17.404 24.4734 16.4663 23.5357C15.5286 22.598 15.0018 21.3262 15.0018 20.0002C15.0018 18.6741 15.5286 17.4023 16.4663 16.4646C17.404 15.5269 18.6757 15.0002 20.0018 15.0002M28.7518 9.16683C28.1993 9.16683 27.6694 9.38632 27.2787 9.77702C26.888 10.1677 26.6685 10.6976 26.6685 11.2502C26.6685 11.8027 26.888 12.3326 27.2787 12.7233C27.6694 13.114 28.1993 13.3335 28.7518 13.3335C29.3043 13.3335 29.8343 13.114 30.225 12.7233C30.6157 12.3326 30.8351 11.8027 30.8351 11.2502C30.8351 10.6976 30.6157 10.1677 30.225 9.77702C29.8343 9.38632 29.3043 9.16683 28.7518 9.16683Z" fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <span>© 2024 Actualise Co. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cart">
+    <div class="cart__inner">
+        <div class="cart__container">
+            <div class="cart__top">
+                <div class="cart__title title-h3">
+                    <span>cart</span>
+                </div>
+                <button type="button" class="cart__close" aria-label="close cart">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.668 11.6667L28.3346 28.3334M11.668 28.3334L28.3346 11.6667" stroke="#6E7175" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="cart__body">
+                <div class="cart__checkout">
+                    <div class="checkout__aside-info">
+                        <div class="cart-item">
+                            <div class="cart-item__img">
+                                <img src="./../img/car-item-img.webp" alt="product" width="156" height="208">
+                            </div>
+                            <div class="cart-item__wrapper">
+                                <div class="cart-item__title">
+                                    <h2>Kirkland Water Pack</h2>
+                                </div>
+                                <div class="cart-item__price">
+                                    <span> $ 40.99</span>
+                                </div>
+                                <form action="" method="post" class="quantity">
+                                    <input type="hidden" name="" value="">
+                                    <div class="quantity__amount">
+                                        <button type="button" class="quantity__btn" data-direction="plus">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12H12M12 12H18M12 12V6M12 12V18" stroke="#A0AAB6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </button>
+                                        <input class="quantity__input" type="number" min="1" max="" value="1" readonly="" name="quantity">
+                                        <button type="button" class="quantity__btn" data-direction="minus">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12H12H18" stroke="#A0AAB6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout__code">
+                        <form action="" method="post" class="checkout__code-form form">
+                            <div class="checkout__code-input">
+                                <input type="text" name="coupon" placeholder="Enter code" required>
+                            </div>
+                            <button type="submit" class="btn">Apply</button>
+                        </form>
+                    </div>
+                    <ul class="checkout__total">
+                        <li>
+                            <span>Subtotal</span>
+                            <span>$ 40.99</span>
+                        </li>
+                        <li>
+                            <span>Delivery</span>
+                            <span>Free</span>
+                        </li>
+                        <li>
+                            <span>Total</span>
+                            <span>$ 40.99</span>
+                        </li>
+                    </ul>
+                    <div class="checkout__btn">
+                        <button type="button" class="btn">Proceed To Pay</button>
+                    </div>
+                </div>
+                <!-- <div class="cart__empty">
+                    <div class="cart__empty-img">
+                        <img src="./../img/cart-empty.svg" alt="" role="presentation" width="260" height="260">
+                    </div>
+                    <div class="cart__title title-h3">
+                        <span>cart is empty</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="display: none;">
+    <div class="popup" id="popup-login">
+        <button type="button" class="popup__close" aria-label="popup close" data-fancybox-close>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.668 11.6667L28.3346 28.3334M11.668 28.3334L28.3346 11.6667" stroke="#6E7175" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="popup__inner">
+            <a href="" class="logo">
+                <img src="./../img/header-logo.svg" alt="" width="180" height="140">
+            </a>
+            <form action="" method="post" class="popup__form form">
+                <div class="form__block">
+                    <div class="form__row">
+                        <div class="input">
+                            <input type="text" name="email_tel" placeholder="Email Or Phone Number" required>
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="input">
+                            <input type="password" name="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="form__text form__text--small">
+                        <a href="#popup-password" data-fancybox>Forgot Password?</a>
+                    </div>
+                </div>
+                <div class="form__btn popup__btn">
+                    <button type="submit" class="btn">Log In</button>
+                </div>
+                <div class="form__text">
+                    <p>Don’t Have An Account? <a href="./../sign-up.html">Sign Up Now</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="popup" id="popup-password">
+        <button type="button" class="popup__close" aria-label="popup close" data-fancybox-close>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.668 11.6667L28.3346 28.3334M11.668 28.3334L28.3346 11.6667" stroke="#6E7175" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="popup__inner">
+            <div class="popup__title title-h3">
+                <span>Forgot your Password?</span>
+            </div>
+            <form action="" method="post" class="popup__form form">
+                <div class="form__block">
+                    <div class="form__row">
+                        <div class="input-notice">
+                            <div class="input">
+                                <input type="email" name="email" placeholder="Email" data-validation="email" required>
+                            </div>
+                            <p>Enter your account email. We’ll send you instructions on how to change your password.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__btn popup__btn">
+                    <button type="submit" class="btn">Send Email</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="popup" id="popup-code">
+        <button type="button" class="popup__close" aria-label="popup close" data-fancybox-close>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.668 11.6667L28.3346 28.3334M11.668 28.3334L28.3346 11.6667" stroke="#6E7175" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="popup__inner">
+            <a href="" class="logo">
+                <img src="./../img/header-logo.svg" alt="" width="180" height="140">
+            </a>
+            <div class="popup__title popup__title--small title-h3">
+                <span>Let’s verify if we service your area</span>
+            </div>
+            <form action="" method="post" class="popup__form form">
+                <div class="form__block">
+                    <div class="form__row">
+                        <div class="input">
+                            <input type="text" name="zipcode" placeholder="Your ZIP Code" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__btn popup__btn">
+                    <button type="submit" class="btn">Check</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="popup popup-code-incorrect" id="popup-code-incorrect">
+        <button type="button" class="popup__close" aria-label="popup close" data-fancybox-close>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.668 11.6667L28.3346 28.3334M11.668 28.3334L28.3346 11.6667" stroke="#6E7175" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="popup__inner">
+            <div class="popup__img">
+                <img src="./../img/img-location.webp" alt="" role="presentation" width="265" height="280">
+            </div>
+            <div class="popup__title title-h3">
+                <span>Sorry!</span>
+            </div>
+            <div class="popup__title popup__title--small title-h3">
+                <span>Currently you are not in our delivery zone.</span>
+            </div>
+            <div class="popup__btn">
+                <button type="button" class="btn" data-fancybox-close="">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  const TEMPLATE_PATH = ''
+  let validationErrors = {
+      "required": "This field is required",
+      "invalid": "This field is invalid",
+      "allowed_ext": "Allowed extensions: &1",
+      "max_size": "Maximum file size is &1",
+      "max_files": "Maximum files you can upload is &1",
+      "minlength": "Minimum number of characters is &1",
+
+      "firstname": {
+          "required": "First Name is required."
+      },
+      "lastname": {
+          "required": "Last Name is required."
+      },
+      "name": {
+          "regex": "Only letters and white space allowed"
+      },
+      "email": {
+          "regex": "The E-mail must be a valid email address.",
+          "required": "E-mail is required."
+      },
+      "zipcode": {
+          "required": "Postcode is required."
+      },
+      "language": {
+          "required": "Language is required."
+      },
+      "city": {
+          "required": "City is required."
+      },
+      "phone": {
+          "required": "Phone is required."
+      },
+      "password": {
+          "minlength": "Minimum number of characters is &1",
+          "regex": "The password must contain numbers and Latin letters",
+      },
+      "password_repeat": {
+          "password_repeat": "Passwords don't match"
+      },
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="https://blackbook.dev/plugin/?dropdown=1&accordion=1&validate=1" type="text/javascript"></script>
+<script src="js/main.js"></script>
+
+  </div>
+</body>
+
+</html>

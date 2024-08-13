@@ -1,0 +1,1 @@
+sectionJS(".banner",function(t){t.forEach(t=>{t.querySelectorAll("[data-rating]").forEach(function(t){let e=t.querySelectorAll(".star"),r=+t.dataset.rating,a=Math.ceil(r);for(let t=0;t<a;t++){let a=e[t].querySelectorAll(".star-mask"),l=r<1?16*r:16;a.forEach(function(t){t.setAttribute("x",4+l)}),r--}})})});

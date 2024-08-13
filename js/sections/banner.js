@@ -1,0 +1,1 @@
+sectionJS(".banner-slider",function(e){e.forEach(e=>{let r=e.querySelector(".swiper"),n=e.querySelector(".swiper__btn--prev"),t=e.querySelector(".swiper__btn--next");new Swiper(r,{slidesPerView:1,spaceBetween:20,speed:700,navigation:{prevEl:n,nextEl:t}})})});
